@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ImplementationTestByGyubin"
 include(":app")
+include(":core:network")
 include(":core:domain")
