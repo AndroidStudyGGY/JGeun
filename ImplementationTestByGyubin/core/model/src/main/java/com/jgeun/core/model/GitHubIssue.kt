@@ -1,4 +1,4 @@
-package com.jgeun.core.domain.model
+package com.jgeun.core.model
 
 data class GithubIssue(
 	val id: Long,

@@ -1,6 +1,6 @@
 package com.jgeun.core.network.model
 
-import com.jgeun.core.domain.model.GithubIssue
+import com.jgeun.core.model.GithubIssue
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,7 +13,7 @@ data class GithubRepoIssueResponse(
 	@SerialName("title")
 	val title: String
 ) {
-	fun toDomain() = GithubIssue(
+	fun toDomain() = com.jgeun.core.model.GithubIssue(
 		id = id,
 		number = number,
 		title = title

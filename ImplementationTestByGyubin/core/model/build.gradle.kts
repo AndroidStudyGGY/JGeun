@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-	namespace = "com.jgeun.core.data"
+	namespace = "com.jgeun.core.model"
 	compileSdk = 34
 
 	defaultConfig {
@@ -30,9 +30,6 @@ android {
 }
 
 dependencies {
-	implementation(project(":core:network"))
-	implementation(project(":core:model"))
-
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 
 	testImplementation(libs.junit)

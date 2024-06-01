@@ -1,9 +1,9 @@
-package com.jgeun.core.data.repository
+package com.jgeun.core.data.repository.github
 
-import com.jgeun.core.domain.model.GithubIssue
-import com.jgeun.core.domain.model.result.ApiResult
-import com.jgeun.core.domain.model.result.safeFlow
-import com.jgeun.core.domain.repository.GitHubRepository
+import com.jgeun.core.model.result.ApiResult
+import com.jgeun.core.model.GithubIssue
+import com.jgeun.core.model.result.safeFlow
+import com.jgeun.core.network.NetworkModule
 import com.jgeun.core.network.api.GithubService
 import kotlinx.coroutines.flow.Flow
 
@@ -20,5 +20,11 @@ class GitHubRepositoryImpl private constructor(
 		).map {
 			it.toDomain()
 		}
+	}
+
+	companion object {
+		fun newInstance() = GitHubRepositoryImpl(
+			NetworkModule.gitHubService
+		)
 	}
 }

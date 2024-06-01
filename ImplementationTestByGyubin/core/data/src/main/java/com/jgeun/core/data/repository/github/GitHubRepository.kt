@@ -1,7 +1,7 @@
-package com.jgeun.core.domain.repository
+package com.jgeun.core.data.repository.github
 
-import com.jgeun.core.domain.model.GithubIssue
-import com.jgeun.core.domain.model.result.ApiResult
+import com.jgeun.core.model.result.ApiResult
+import com.jgeun.core.model.GithubIssue
 import kotlinx.coroutines.flow.Flow
 
 interface GitHubRepository {
